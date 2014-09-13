@@ -55,13 +55,24 @@ cat(paste(sp[c("kingdom","phylum","class","order","family","genus","species")]),
 
 ### Ursus americanus
 
+Count the number of georeferenced occurrences with `occ_count()`
+
+
+```r
+(max_occ <- occ_count(taxonKey=sp$speciesKey, georeferenced=TRUE))
+```
+
+```
+## [1] 2859
+```
+
 Search for georeferenced occurrences using `occ_search()`
 
 
 ```r
 dat <- occ_search(taxonKey=sp$speciesKey,
         fields=c("name","key","decimalLatitude","decimalLongitude","basisOfRecord"),
-        limit=300, return='data',hasCoordinate= TRUE)
+        limit=max_occ, return='data',hasCoordinate= TRUE)
 head(dat[,3:5])
 ```
 
@@ -82,5 +93,15 @@ head(dat[,3:5])
 
 ### Ursus americanus
 
+Map occurrences
+
+
+```r
+gbifmap()
+```
+
+```
+## Error: no input has determined the number of cases
+```
 
 
