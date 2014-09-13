@@ -16,7 +16,7 @@ knit        : slidify::knit2slides
 
 ### GBIF's vision
 
-*A world in which biodiversity information is freely and universally available for science, society and a sustainable future.*
+*"A world in which biodiversity information is freely and universally available for science, society and a sustainable future."*
 
 + International open data infrastructure, funded by governments.
 
