@@ -85,10 +85,6 @@ head(dat[,3:5])
 Map occurrences
 
 
-```r
-gbifmap(dat)
-```
-
 ```
 ## Rendering map...plotting 2858 points
 ```
