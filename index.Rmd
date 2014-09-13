@@ -34,21 +34,24 @@ knit        : slidify::knit2slides
 
 The American black bear (Ursus americanus) is a medium-sized bear native to North America. It is the continent's smallest and most widely distributed bear species.
 
+`name_backbone()` is used to search against the GBIF backbone taxonomy:
+
 ```{r echo=TRUE, tidy_source=TRUE}
 suppressPackageStartupMessages(library(rgbif))
 
-sp <- name_lookup('Ursus americanus', rank="species", return = 'data', limit=1)
+sp <- name_backbone(name='Ursus americanus', rank='species')
 # Classification
-sp[5:9]
+sp[c("kingdom","phylum","class","order","family","genus","species")]
 
-# Authorship
-sp$authorship
 ```
-
 
 ---
 
-## Slide 4
+## Example
+
+### Ursus americanus
+
+Get taxonomic keys
 
 ---
 

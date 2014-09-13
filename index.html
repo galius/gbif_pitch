@@ -73,22 +73,35 @@
 
 <p>The American black bear (Ursus americanus) is a medium-sized bear native to North America. It is the continent&#39;s smallest and most widely distributed bear species.</p>
 
+<p><code>name_backbone()</code> is used to search against the GBIF backbone taxonomy:</p>
+
 <pre><code class="r">suppressPackageStartupMessages(library(rgbif))
 
-sp &lt;- name_lookup(&#39;Ursus americanus&#39;, rank=&quot;species&quot;, return = &#39;data&#39;, limit=1)
+sp &lt;- name_backbone(name=&#39;Ursus americanus&#39;, rank=&#39;species&#39;)
 # Classification
-sp[5:9]
+sp[c(&quot;kingdom&quot;,&quot;phylum&quot;,&quot;class&quot;,&quot;order&quot;,&quot;family&quot;,&quot;genus&quot;,&quot;species&quot;)]
 </code></pre>
 
-<pre><code>##    kingdom   phylum     order  family genus
-## 1 Animalia Chordata Carnivora Ursidae Ursus
-</code></pre>
-
-<pre><code class="r"># Authorship
-sp$authorship
-</code></pre>
-
-<pre><code>## [1] &quot;Pallas, 1780&quot;
+<pre><code>## $kingdom
+## [1] &quot;Animalia&quot;
+## 
+## $phylum
+## [1] &quot;Chordata&quot;
+## 
+## $class
+## [1] &quot;Mammalia&quot;
+## 
+## $order
+## [1] &quot;Carnivora&quot;
+## 
+## $family
+## [1] &quot;Ursidae&quot;
+## 
+## $genus
+## [1] &quot;Ursus&quot;
+## 
+## $species
+## [1] &quot;Ursus americanus&quot;
 </code></pre>
 
   </article>
@@ -97,10 +110,13 @@ sp$authorship
 
 <slide class="" id="slide-3" style="background:;">
   <hgroup>
-    <h2>Slide 4</h2>
+    <h2>Example</h2>
   </hgroup>
   <article data-timings="">
-    
+    <h3>Ursus americanus</h3>
+
+<p>Get taxonomic keys</p>
+
   </article>
   <!-- Presenter Notes -->
 </slide>
@@ -133,7 +149,7 @@ sp$authorship
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=3 title='Slide 4'>
+        data-slide=3 title='Example'>
          3
       </a>
     </li>
