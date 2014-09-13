@@ -96,12 +96,22 @@ cat(paste(sp[c(&quot;kingdom&quot;,&quot;phylum&quot;,&quot;class&quot;,&quot;or
   <article data-timings="">
     <h3>Ursus americanus</h3>
 
-<pre><code class="r"># Search for georeferenced occurrences
-dat &lt;- occ_search(taxonKey=sp$speciesKey,
-        fields=c(&quot;name&quot;,&quot;key&quot;,&quot;decimalLatitude&quot;,&quot;decimalLongitude&quot;,&quot;basisOfRecord&quot;) , limit=300, return=&#39;data&#39;,hasCoordinate= TRUE)
+<p>Search for georeferenced occurrences using <code>occ_search()</code></p>
+
+<pre><code class="r">dat &lt;- occ_search(taxonKey=sp$speciesKey,
+        fields=c(&quot;name&quot;,&quot;key&quot;,&quot;decimalLatitude&quot;,&quot;decimalLongitude&quot;,&quot;basisOfRecord&quot;),
+        limit=300, return=&#39;data&#39;,hasCoordinate= TRUE)
+head(dat[,3:5])
 </code></pre>
 
-<p>head(dat[,3:5])</p>
+<pre><code>##       basisOfRecord decimalLongitude decimalLatitude
+## 1 HUMAN_OBSERVATION          -103.29           29.23
+## 2 HUMAN_OBSERVATION           -72.53           43.74
+## 3 HUMAN_OBSERVATION          -103.29           29.28
+## 4 HUMAN_OBSERVATION          -103.32           29.27
+## 5 HUMAN_OBSERVATION          -103.30           29.28
+## 6 HUMAN_OBSERVATION           -80.07           37.80
+</code></pre>
 
   </article>
   <!-- Presenter Notes -->

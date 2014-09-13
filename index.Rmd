@@ -51,12 +51,15 @@ cat(paste(sp[c("kingdom","phylum","class","order","family","genus","species")]),
 
 ### Ursus americanus
 
+Search for georeferenced occurrences using `occ_search()`
+
 ```{r echo=TRUE, tidy_source=TRUE}
-# Search for georeferenced occurrences
 dat <- occ_search(taxonKey=sp$speciesKey,
-        fields=c("name","key","decimalLatitude","decimalLongitude","basisOfRecord") , limit=300, return='data',hasCoordinate= TRUE)
-```
+        fields=c("name","key","decimalLatitude","decimalLongitude","basisOfRecord"),
+        limit=300, return='data',hasCoordinate= TRUE)
 head(dat[,3:5])
+```
+
 
 ---
 
