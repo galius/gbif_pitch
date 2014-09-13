@@ -28,9 +28,35 @@ knit        : slidify::knit2slides
 
 ---
 
-## Example - *Ursus americanus*
+## Example
 
-The American black bear (Ursus americanus) is a medium-sized bear native to North America. It is the continent's smallest and most widely distributed bear species. 
+### Ursus americanus
+
+The American black bear (Ursus americanus) is a medium-sized bear native to North America. It is the continent's smallest and most widely distributed bear species.
+
+
+```r
+suppressPackageStartupMessages(library(rgbif))
+
+sp <- name_lookup('Ursus americanus', rank="species", return = 'data', limit=1)
+# Classification
+sp[5:9]
+```
+
+```
+##    kingdom   phylum     order  family genus
+## 1 Animalia Chordata Carnivora Ursidae Ursus
+```
+
+```r
+# Authorship
+sp$authorship
+```
+
+```
+## [1] "Pallas, 1780"
+```
+
 
 ---
 

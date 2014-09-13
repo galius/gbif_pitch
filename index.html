@@ -66,10 +66,30 @@
 
 <slide class="" id="slide-2" style="background:;">
   <hgroup>
-    <h2>Example - <em>Ursus americanus</em></h2>
+    <h2>Example</h2>
   </hgroup>
   <article data-timings="">
-    <p>The American black bear (Ursus americanus) is a medium-sized bear native to North America. It is the continent&#39;s smallest and most widely distributed bear species. </p>
+    <h3>Ursus americanus</h3>
+
+<p>The American black bear (Ursus americanus) is a medium-sized bear native to North America. It is the continent&#39;s smallest and most widely distributed bear species.</p>
+
+<pre><code class="r">suppressPackageStartupMessages(library(rgbif))
+
+sp &lt;- name_lookup(&#39;Ursus americanus&#39;, rank=&quot;species&quot;, return = &#39;data&#39;, limit=1)
+# Classification
+sp[5:9]
+</code></pre>
+
+<pre><code>##    kingdom   phylum     order  family genus
+## 1 Animalia Chordata Carnivora Ursidae Ursus
+</code></pre>
+
+<pre><code class="r"># Authorship
+sp$authorship
+</code></pre>
+
+<pre><code>## [1] &quot;Pallas, 1780&quot;
+</code></pre>
 
   </article>
   <!-- Presenter Notes -->
@@ -107,7 +127,7 @@
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=2 title='Example - <em>Ursus americanus</em>'>
+        data-slide=2 title='Example'>
          2
       </a>
     </li>
