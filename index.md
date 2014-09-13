@@ -64,8 +64,15 @@ Search for georeferenced occurrences using `occ_search()`:
 
 ```r
 dat <- occ_search(taxonKey=sp$speciesKey,
-        fields=c("name","key","decimalLatitude","decimalLongitude","basisOfRecord"),
+        fields=c("name","key","decimalLatitude","decimalLongitude","basisOfRecord","publishingCountry"),
         limit=max_occ, return='data',hasCoordinate= TRUE)
+```
+
+```
+## Error: easy handled already used in multi handle
+```
+
+```r
 head(dat[,3:5])
 ```
 
@@ -91,7 +98,5 @@ gbifmap(dat)
 ```
 
 ![plot of chunk unnamed-chunk-4](assets/fig/unnamed-chunk-4.png) 
-
-![]("800px-Ursus_americanusDetail.jpg")
 
 

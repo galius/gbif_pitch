@@ -101,9 +101,14 @@ cat(paste(sp[c(&quot;kingdom&quot;,&quot;phylum&quot;,&quot;class&quot;,&quot;or
     <p>Search for georeferenced occurrences using <code>occ_search()</code>:</p>
 
 <pre><code class="r">dat &lt;- occ_search(taxonKey=sp$speciesKey,
-        fields=c(&quot;name&quot;,&quot;key&quot;,&quot;decimalLatitude&quot;,&quot;decimalLongitude&quot;,&quot;basisOfRecord&quot;),
+        fields=c(&quot;name&quot;,&quot;key&quot;,&quot;decimalLatitude&quot;,&quot;decimalLongitude&quot;,&quot;basisOfRecord&quot;,&quot;publishingCountry&quot;),
         limit=max_occ, return=&#39;data&#39;,hasCoordinate= TRUE)
-head(dat[,3:5])
+</code></pre>
+
+<pre><code>## Error: easy handled already used in multi handle
+</code></pre>
+
+<pre><code class="r">head(dat[,3:5])
 </code></pre>
 
 <pre><code>##       basisOfRecord decimalLongitude decimalLatitude
@@ -130,8 +135,6 @@ head(dat[,3:5])
 </code></pre>
 
 <p><img src="assets/fig/unnamed-chunk-4.png" alt="plot of chunk unnamed-chunk-4"> </p>
-
-<p><img src="%22800px-Ursus_americanusDetail.jpg%22" alt=""></p>
 
 <div style='float:left;width:48%;' class='centered'>
   
