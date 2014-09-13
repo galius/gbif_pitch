@@ -51,19 +51,18 @@ cat(paste(sp[c("kingdom","phylum","class","order","family","genus","species")]),
 
 ### Ursus americanus
 
-You can also search for subspecies using `name_suggest()`
 ```{r echo=TRUE, tidy_source=TRUE}
-name_suggest(q='Ursus americanus',limit=6)
+# Search for georeferenced occurrences
+dat <- occ_search(taxonKey=sp$speciesKey,
+        fields=c("name","key","decimalLatitude","decimalLongitude","basisOfRecord") , limit=300, return='data',hasCoordinate= TRUE)
 ```
+head(dat[,3:5])
 
 ---
 
-## Slide 5
+## Example
 
-Get taxonomic key
-key <- name_backbone(name='Puma concolor')$speciesKey
-dat <- occ_search(taxonKey=key, return='data', limit=300)
-
+### Ursus americanus
 
 
 

@@ -96,19 +96,12 @@ cat(paste(sp[c(&quot;kingdom&quot;,&quot;phylum&quot;,&quot;class&quot;,&quot;or
   <article data-timings="">
     <h3>Ursus americanus</h3>
 
-<p>You can also search for subspecies using <code>name_suggest()</code></p>
-
-<pre><code class="r">name_suggest(q=&#39;Ursus americanus&#39;,limit=6)
+<pre><code class="r"># Search for georeferenced occurrences
+dat &lt;- occ_search(taxonKey=sp$speciesKey,
+        fields=c(&quot;name&quot;,&quot;key&quot;,&quot;decimalLatitude&quot;,&quot;decimalLongitude&quot;,&quot;basisOfRecord&quot;) , limit=300, return=&#39;data&#39;,hasCoordinate= TRUE)
 </code></pre>
 
-<pre><code>##       key                  canonicalName       rank
-## 1 2433407               Ursus americanus    SPECIES
-## 2 6163825 Ursus americanus altifrontalis SUBSPECIES
-## 3 6163826     Ursus americanus carlottae SUBSPECIES
-## 4 6163827      Ursus americanus eremicus SUBSPECIES
-## 5 6163828      Ursus americanus kermodei SUBSPECIES
-## 6 6163829        Ursus americanus pugnax SUBSPECIES
-</code></pre>
+<p>head(dat[,3:5])</p>
 
   </article>
   <!-- Presenter Notes -->
@@ -116,12 +109,10 @@ cat(paste(sp[c(&quot;kingdom&quot;,&quot;phylum&quot;,&quot;class&quot;,&quot;or
 
 <slide class="" id="slide-4" style="background:;">
   <hgroup>
-    <h2>Slide 5</h2>
+    <h2>Example</h2>
   </hgroup>
   <article data-timings="">
-    <p>Get taxonomic key
-key &lt;- name_backbone(name=&#39;Puma concolor&#39;)$speciesKey
-dat &lt;- occ_search(taxonKey=key, return=&#39;data&#39;, limit=300)</p>
+    <h3>Ursus americanus</h3>
 
   </article>
   <!-- Presenter Notes -->
@@ -151,7 +142,7 @@ dat &lt;- occ_search(taxonKey=key, return=&#39;data&#39;, limit=300)</p>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=4 title='Slide 5'>
+        data-slide=4 title='Example'>
          4
       </a>
     </li>
