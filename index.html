@@ -54,9 +54,9 @@
 <p><strong>&quot;A world in which biodiversity information is freely and universally available for science, society and a sustainable future.&quot;</strong></p>
 
 <ul>
-<li><p>International open data infrastructure, funded by governments.</p></li>
+<li><p>GBIF is an international open data infrastructure funded by governments.</p></li>
 <li><p>It provides a single point of access to more than 400 million records related to evidence of more than one million species.</p></li>
-<li><p>Biggest biodiversity database on the Internet.</p></li>
+<li><p>It is the biggest biodiversity database on the Internet.</p></li>
 <li><p><code>rgbif</code> is an R package to search and retrieve biodiversity data using the public GBIF API.</p></li>
 </ul>
 
@@ -81,7 +81,7 @@ cat(paste(sp[c(&quot;kingdom&quot;,&quot;phylum&quot;,&quot;class&quot;,&quot;or
 <pre><code>## Animalia,Chordata,Mammalia,Carnivora,Ursidae,Ursus,Ursus americanus
 </code></pre>
 
-<p>Count the number of georeferenced occurrences with <code>occ_count()</code></p>
+<p>Count the number of georeferenced occurrences with <code>occ_count()</code>:</p>
 
 <pre><code class="r">(max_occ &lt;- occ_count(taxonKey=sp$speciesKey, georeferenced=TRUE))
 </code></pre>
@@ -98,7 +98,7 @@ cat(paste(sp[c(&quot;kingdom&quot;,&quot;phylum&quot;,&quot;class&quot;,&quot;or
     <h2>Example: Ursus americanus</h2>
   </hgroup>
   <article data-timings="">
-    <p>Search for georeferenced occurrences using <code>occ_search()</code></p>
+    <p>Search for georeferenced occurrences using <code>occ_search()</code>:</p>
 
 <pre><code class="r">dat &lt;- occ_search(taxonKey=sp$speciesKey,
         fields=c(&quot;name&quot;,&quot;key&quot;,&quot;decimalLatitude&quot;,&quot;decimalLongitude&quot;,&quot;basisOfRecord&quot;),
@@ -125,11 +125,6 @@ head(dat[,3:5])
   </hgroup>
   <article data-timings="">
     <p>Map occurrences</p>
-
-<pre><code class="r">gbifmap(dat)
-</code></pre>
-
-<p><img src="assets/fig/unnamed-chunk-4.png" alt="plot of chunk unnamed-chunk-4"> </p>
 
   </article>
   <!-- Presenter Notes -->

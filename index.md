@@ -18,11 +18,11 @@ knit        : slidify::knit2slides
 
 **"A world in which biodiversity information is freely and universally available for science, society and a sustainable future."**
 
-+ International open data infrastructure, funded by governments.
++ GBIF is an international open data infrastructure funded by governments.
 
 + It provides a single point of access to more than 400 million records related to evidence of more than one million species.
 
-+ Biggest biodiversity database on the Internet.
++ It is the biggest biodiversity database on the Internet.
 
 + `rgbif` is an R package to search and retrieve biodiversity data using the public GBIF API.
 
@@ -44,7 +44,7 @@ cat(paste(sp[c("kingdom","phylum","class","order","family","genus","species")]),
 ```
 ## Animalia,Chordata,Mammalia,Carnivora,Ursidae,Ursus,Ursus americanus
 ```
-Count the number of georeferenced occurrences with `occ_count()`
+Count the number of georeferenced occurrences with `occ_count()`:
 
 
 ```r
@@ -59,7 +59,7 @@ Count the number of georeferenced occurrences with `occ_count()`
 
 ## Example: Ursus americanus
 
-Search for georeferenced occurrences using `occ_search()`
+Search for georeferenced occurrences using `occ_search()`:
 
 
 ```r
@@ -85,11 +85,15 @@ head(dat[,3:5])
 
 Map occurrences
 
+*** left
 
 ```r
 gbifmap(dat)
 ```
 
 ![plot of chunk unnamed-chunk-4](assets/fig/unnamed-chunk-4.png) 
+
+*** right
+![]("800px-Ursus_americanusDetail.jpg")
 
 
