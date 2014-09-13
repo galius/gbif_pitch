@@ -28,9 +28,7 @@ knit        : slidify::knit2slides
 
 ---
 
-## Example
-
-### Ursus americanus
+## Example: Ursus americanus
 
 The American black bear (Ursus americanus) is a medium-sized bear native to North America. It is the continent's smallest and most widely distributed bear species.
 
@@ -51,9 +49,7 @@ cat(paste(sp[c("kingdom","phylum","class","order","family","genus","species")]),
 
 ---
 
-## Example
-
-### Ursus americanus
+## Example: Ursus americanus
 
 Count the number of georeferenced occurrences with `occ_count()`
 
@@ -89,19 +85,19 @@ head(dat[,3:5])
 
 ---
 
-## Example
-
-### Ursus americanus
+## Example: Ursus americanus
 
 Map occurrences
 
 
 ```r
-gbifmap()
+gbifmap(dat)
 ```
 
 ```
-## Error: no input has determined the number of cases
+## Rendering map...plotting 2858 points
 ```
+
+![plot of chunk unnamed-chunk-4](assets/fig/unnamed-chunk-4.png) 
 
 

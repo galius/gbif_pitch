@@ -66,12 +66,10 @@
 
 <slide class="" id="slide-2" style="background:;">
   <hgroup>
-    <h2>Example</h2>
+    <h2>Example: Ursus americanus</h2>
   </hgroup>
   <article data-timings="">
-    <h3>Ursus americanus</h3>
-
-<p>The American black bear (Ursus americanus) is a medium-sized bear native to North America. It is the continent&#39;s smallest and most widely distributed bear species.</p>
+    <p>The American black bear (Ursus americanus) is a medium-sized bear native to North America. It is the continent&#39;s smallest and most widely distributed bear species.</p>
 
 <p><code>name_backbone()</code> is used to search against the GBIF backbone taxonomy:</p>
 
@@ -91,12 +89,10 @@ cat(paste(sp[c(&quot;kingdom&quot;,&quot;phylum&quot;,&quot;class&quot;,&quot;or
 
 <slide class="" id="slide-3" style="background:;">
   <hgroup>
-    <h2>Example</h2>
+    <h2>Example: Ursus americanus</h2>
   </hgroup>
   <article data-timings="">
-    <h3>Ursus americanus</h3>
-
-<p>Count the number of georeferenced occurrences with <code>occ_count()</code></p>
+    <p>Count the number of georeferenced occurrences with <code>occ_count()</code></p>
 
 <pre><code class="r">(max_occ &lt;- occ_count(taxonKey=sp$speciesKey, georeferenced=TRUE))
 </code></pre>
@@ -127,18 +123,18 @@ head(dat[,3:5])
 
 <slide class="" id="slide-4" style="background:;">
   <hgroup>
-    <h2>Example</h2>
+    <h2>Example: Ursus americanus</h2>
   </hgroup>
   <article data-timings="">
-    <h3>Ursus americanus</h3>
+    <p>Map occurrences</p>
 
-<p>Map occurrences</p>
-
-<pre><code class="r">gbifmap()
+<pre><code class="r">gbifmap(dat)
 </code></pre>
 
-<pre><code>## Error: no input has determined the number of cases
+<pre><code>## Rendering map...plotting 2858 points
 </code></pre>
+
+<p><img src="assets/fig/unnamed-chunk-4.png" alt="plot of chunk unnamed-chunk-4"> </p>
 
   </article>
   <!-- Presenter Notes -->
@@ -156,19 +152,19 @@ head(dat[,3:5])
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=2 title='Example'>
+        data-slide=2 title='Example: Ursus americanus'>
          2
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=3 title='Example'>
+        data-slide=3 title='Example: Ursus americanus'>
          3
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=4 title='Example'>
+        data-slide=4 title='Example: Ursus americanus'>
          4
       </a>
     </li>
