@@ -62,17 +62,24 @@ Search for georeferenced occurrences using `occ_search()`
 dat <- occ_search(taxonKey=sp$speciesKey,
         fields=c("name","key","decimalLatitude","decimalLongitude","basisOfRecord"),
         limit=300, return='data',hasCoordinate= TRUE)
-head(dat[,3:5])
+head(dat)
 ```
 
 ```
-##       basisOfRecord decimalLongitude decimalLatitude
-## 1 HUMAN_OBSERVATION          -103.29           29.23
-## 2 HUMAN_OBSERVATION           -72.53           43.74
-## 3 HUMAN_OBSERVATION          -103.29           29.28
-## 4 HUMAN_OBSERVATION          -103.32           29.27
-## 5 HUMAN_OBSERVATION          -103.30           29.28
-## 6 HUMAN_OBSERVATION           -80.07           37.80
+##               name       key     basisOfRecord decimalLongitude
+## 1 Ursus americanus 891034709 HUMAN_OBSERVATION          -103.29
+## 2 Ursus americanus 891045574 HUMAN_OBSERVATION           -72.53
+## 3 Ursus americanus 891041363 HUMAN_OBSERVATION          -103.29
+## 4 Ursus americanus 891056344 HUMAN_OBSERVATION          -103.32
+## 5 Ursus americanus 911496466 HUMAN_OBSERVATION          -103.30
+## 6 Ursus americanus 911495727 HUMAN_OBSERVATION           -80.07
+##   decimalLatitude
+## 1           29.23
+## 2           43.74
+## 3           29.28
+## 4           29.27
+## 5           29.28
+## 6           37.80
 ```
 
 
