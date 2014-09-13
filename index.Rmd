@@ -57,7 +57,7 @@ Search for georeferenced occurrences using `occ_search()`
 dat <- occ_search(taxonKey=sp$speciesKey,
         fields=c("name","key","decimalLatitude","decimalLongitude","basisOfRecord"),
         limit=300, return='data',hasCoordinate= TRUE)
-head(dat)
+head(dat[,3:5])
 ```
 
 
