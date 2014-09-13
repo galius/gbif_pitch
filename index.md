@@ -79,7 +79,7 @@ head(dat[,3:5])
 ## 6 HUMAN_OBSERVATION           -80.07           37.80
 ```
 
----
+--- &twocol w1:60% w2:40%
 
 ## Example: Ursus americanus
 

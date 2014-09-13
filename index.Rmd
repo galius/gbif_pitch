@@ -58,7 +58,7 @@ dat <- occ_search(taxonKey=sp$speciesKey,
 head(dat[,3:5])
 ```
 
----
+--- &twocol w1:60% w2:40%
 
 ## Example: Ursus americanus
 
