@@ -77,6 +77,7 @@ head(dat[,3:5])
 ## 5 HUMAN_OBSERVATION          -103.30           29.28
 ## 6 HUMAN_OBSERVATION           -80.07           37.80
 ```
+
 ---
 
 ## Example: Ursus americanus
