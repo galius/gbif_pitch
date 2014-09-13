@@ -90,10 +90,6 @@ Map occurrences
 gbifmap(dat)
 ```
 
-```
-Rendering map...plotting 2858 points
-```
-
 ![plot of chunk unnamed-chunk-4](assets/fig/unnamed-chunk-4.png) 
 
 
