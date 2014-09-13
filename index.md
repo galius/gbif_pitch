@@ -85,16 +85,12 @@ head(dat[,3:5])
 
 Map occurrences
 
-*** left
-
 
 ```r
 gbifmap(dat)
 ```
 
 ![plot of chunk unnamed-chunk-4](assets/fig/unnamed-chunk-4.png) 
-
-*** right
 
 ![]("800px-Ursus_americanusDetail.jpg")
 
