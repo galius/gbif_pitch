@@ -74,31 +74,24 @@
 <p><code>name_backbone()</code> is used to search against the GBIF backbone taxonomy:</p>
 
 <pre><code class="r">suppressPackageStartupMessages(library(rgbif))
-
 sp &lt;- name_backbone(name=&#39;Ursus americanus&#39;, rank=&#39;species&#39;)
-# Classification
 cat(paste(sp[c(&quot;kingdom&quot;,&quot;phylum&quot;,&quot;class&quot;,&quot;order&quot;,&quot;family&quot;,&quot;genus&quot;,&quot;species&quot;)]),sep=&quot;,&quot;)
 </code></pre>
 
 <pre><code>## Animalia,Chordata,Mammalia,Carnivora,Ursidae,Ursus,Ursus americanus
 </code></pre>
 
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-3" style="background:;">
-  <hgroup>
-    <h2>Example: Ursus americanus</h2>
-  </hgroup>
-  <article data-timings="">
-    <p>Count the number of georeferenced occurrences with <code>occ_count()</code></p>
+<p>Count the number of georeferenced occurrences with <code>occ_count()</code></p>
 
 <pre><code class="r">(max_occ &lt;- occ_count(taxonKey=sp$speciesKey, georeferenced=TRUE))
 </code></pre>
 
 <pre><code>## [1] 2859
 </code></pre>
+
+<hr>
+
+<h2>Example: Ursus americanus</h2>
 
 <p>Search for georeferenced occurrences using <code>occ_search()</code></p>
 
@@ -117,16 +110,11 @@ head(dat[,3:5])
 ## 6 HUMAN_OBSERVATION           -80.07           37.80
 </code></pre>
 
-  </article>
-  <!-- Presenter Notes -->
-</slide>
+<hr>
 
-<slide class="" id="slide-4" style="background:;">
-  <hgroup>
-    <h2>Example: Ursus americanus</h2>
-  </hgroup>
-  <article data-timings="">
-    <p>Map occurrences</p>
+<h2>Example: Ursus americanus</h2>
+
+<p>Map occurrences</p>
 
 <pre><code class="r">gbifmap(dat)
 </code></pre>
@@ -154,18 +142,6 @@ head(dat[,3:5])
       <a href="#" target="_self" rel='tooltip' 
         data-slide=2 title='Example: Ursus americanus'>
          2
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=3 title='Example: Ursus americanus'>
-         3
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=4 title='Example: Ursus americanus'>
-         4
       </a>
     </li>
   </ul>

@@ -36,22 +36,17 @@ The American black bear (Ursus americanus) is a medium-sized bear native to Nort
 
 ```{r echo=TRUE, tidy_source=TRUE}
 suppressPackageStartupMessages(library(rgbif))
-
 sp <- name_backbone(name='Ursus americanus', rank='species')
-# Classification
 cat(paste(sp[c("kingdom","phylum","class","order","family","genus","species")]),sep=",")
-
 ```
-
----
-
-## Example: Ursus americanus
-
 Count the number of georeferenced occurrences with `occ_count()`
 
 ```{r echo=TRUE, tidy_source=TRUE}
 (max_occ <- occ_count(taxonKey=sp$speciesKey, georeferenced=TRUE))
 ```
+---
+
+## Example: Ursus americanus
 
 Search for georeferenced occurrences using `occ_search()`
 
@@ -61,15 +56,13 @@ dat <- occ_search(taxonKey=sp$speciesKey,
         limit=max_occ, return='data',hasCoordinate= TRUE)
 head(dat[,3:5])
 ```
-
-
 ---
 
 ## Example: Ursus americanus
 
 Map occurrences
 
-```{r echo=TRUE, tidy_source=TRUE}
+```{r echo=TRUE, tidy_source=TRUE, fig.height=8, fig.width=8}
 gbifmap(dat)
 ```
 
