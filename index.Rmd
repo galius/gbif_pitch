@@ -14,9 +14,9 @@ knit        : slidify::knit2slides
 
 ## Global Biodiversity Information Facility (GBIF)
 
-#### GBIF's vision
+### GBIF's vision
 
-> A world in which biodiversity information is freely and universally available for science, society and a sustainable future.
+__A world in which biodiversity information is freely and universally available for science, society and a sustainable future.__
 
 + International open data infrastructure, funded by governments.
 
