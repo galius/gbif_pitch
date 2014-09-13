@@ -55,11 +55,29 @@ cat(paste(sp[c("kingdom","phylum","class","order","family","genus","species")]),
 
 ### Ursus americanus
 
-Get taxonomic keys
+You can also search for subspecies using `name_suggest()`
+
+```r
+name_suggest(q='Ursus americanus',limit=6)
+```
+
+```
+##       key                  canonicalName       rank
+## 1 2433407               Ursus americanus    SPECIES
+## 2 6163825 Ursus americanus altifrontalis SUBSPECIES
+## 3 6163826     Ursus americanus carlottae SUBSPECIES
+## 4 6163827      Ursus americanus eremicus SUBSPECIES
+## 5 6163828      Ursus americanus kermodei SUBSPECIES
+## 6 6163829        Ursus americanus pugnax SUBSPECIES
+```
 
 ---
 
 ## Slide 5
+
+Get taxonomic key
+key <- name_backbone(name='Puma concolor')$speciesKey
+dat <- occ_search(taxonKey=key, return='data', limit=300)
 
 
 
