@@ -24,15 +24,20 @@ knit        : slidify::knit2slides
 
 + Biggest biodiversity database on the Internet.
 
++ `rgbif` is an R package to search and retrieve biodiversity data using the public GBIF API.
+
 ---
-
-## Slide 2
-
 
 ## Slide 3
 
+---
+
 ## Slide 4
 
+---
+
 ## Slide 5
+
+
 
 
