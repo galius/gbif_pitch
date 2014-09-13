@@ -79,29 +79,10 @@
 
 sp &lt;- name_backbone(name=&#39;Ursus americanus&#39;, rank=&#39;species&#39;)
 # Classification
-sp[c(&quot;kingdom&quot;,&quot;phylum&quot;,&quot;class&quot;,&quot;order&quot;,&quot;family&quot;,&quot;genus&quot;,&quot;species&quot;)]
+cat(paste(sp[c(&quot;kingdom&quot;,&quot;phylum&quot;,&quot;class&quot;,&quot;order&quot;,&quot;family&quot;,&quot;genus&quot;,&quot;species&quot;)]))
 </code></pre>
 
-<pre><code>## $kingdom
-## [1] &quot;Animalia&quot;
-## 
-## $phylum
-## [1] &quot;Chordata&quot;
-## 
-## $class
-## [1] &quot;Mammalia&quot;
-## 
-## $order
-## [1] &quot;Carnivora&quot;
-## 
-## $family
-## [1] &quot;Ursidae&quot;
-## 
-## $genus
-## [1] &quot;Ursus&quot;
-## 
-## $species
-## [1] &quot;Ursus americanus&quot;
+<pre><code>## Animalia Chordata Mammalia Carnivora Ursidae Ursus Ursus americanus
 </code></pre>
 
   </article>
