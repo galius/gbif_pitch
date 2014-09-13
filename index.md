@@ -42,11 +42,11 @@ suppressPackageStartupMessages(library(rgbif))
 
 sp <- name_backbone(name='Ursus americanus', rank='species')
 # Classification
-cat(paste(sp[c("kingdom","phylum","class","order","family","genus","species")]))
+cat(paste(sp[c("kingdom","phylum","class","order","family","genus","species")]),sep=",")
 ```
 
 ```
-## Animalia Chordata Mammalia Carnivora Ursidae Ursus Ursus americanus
+## Animalia,Chordata,Mammalia,Carnivora,Ursidae,Ursus,Ursus americanus
 ```
 
 ---
