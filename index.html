@@ -89,11 +89,16 @@ cat(paste(sp[c(&quot;kingdom&quot;,&quot;phylum&quot;,&quot;class&quot;,&quot;or
 <pre><code>## [1] 2859
 </code></pre>
 
-<hr>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
 
-<h2>Example: Ursus americanus</h2>
-
-<p>Search for georeferenced occurrences using <code>occ_search()</code></p>
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Example: Ursus americanus</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Search for georeferenced occurrences using <code>occ_search()</code></p>
 
 <pre><code class="r">dat &lt;- occ_search(taxonKey=sp$speciesKey,
         fields=c(&quot;name&quot;,&quot;key&quot;,&quot;decimalLatitude&quot;,&quot;decimalLongitude&quot;,&quot;basisOfRecord&quot;),
@@ -114,14 +119,17 @@ head(dat[,3:5])
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-3" style="background:;">
+<slide class="" id="slide-4" style="background:;">
   <hgroup>
     <h2>Example: Ursus americanus</h2>
   </hgroup>
   <article data-timings="">
     <p>Map occurrences</p>
 
-<pre><code>## Rendering map...plotting 2858 points
+<pre><code class="r">gbifmap(dat)
+</code></pre>
+
+<pre><code>Rendering map...plotting 2858 points
 </code></pre>
 
 <p><img src="assets/fig/unnamed-chunk-4.png" alt="plot of chunk unnamed-chunk-4"> </p>
@@ -150,6 +158,12 @@ head(dat[,3:5])
       <a href="#" target="_self" rel='tooltip' 
         data-slide=3 title='Example: Ursus americanus'>
          3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Example: Ursus americanus'>
+         4
       </a>
     </li>
   </ul>

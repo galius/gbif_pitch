@@ -54,6 +54,7 @@ Count the number of georeferenced occurrences with `occ_count()`
 ```
 ## [1] 2859
 ```
+
 ---
 
 ## Example: Ursus americanus
@@ -85,8 +86,12 @@ head(dat[,3:5])
 Map occurrences
 
 
+```r
+gbifmap(dat)
 ```
-## Rendering map...plotting 2858 points
+
+```
+Rendering map...plotting 2858 points
 ```
 
 ![plot of chunk unnamed-chunk-4](assets/fig/unnamed-chunk-4.png) 
