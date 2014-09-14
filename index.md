@@ -68,10 +68,6 @@ dat <- occ_search(taxonKey=sp$speciesKey,
         limit=max_occ, return='data',hasCoordinate= TRUE)
 ```
 
-```
-## Error: easy handled already used in multi handle
-```
-
 ```r
 head(dat[,3:5])
 ```
@@ -96,7 +92,7 @@ library(googleVis)
 dat$Loc <- paste(dat$decimalLatitude, dat$decimalLongitude, sep=":")
 gvisMap(dat,locationvar="Loc",tipvar="basisOfRecord")
 ```
-
+<iframe srcdoc="
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -14502,6 +14498,6 @@ callbacks.shift()();
   &#8226; <a href="https://developers.google.com/terms/">Google Terms of Use</a> &#8226; <a href="https://google-developers.appspot.com/chart/interactive/docs/gallery/map">Documentation and Data Policy</a>
 </span></div>
 </body>
-</html>
+</html>"></iframe>
 
 
