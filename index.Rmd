@@ -64,10 +64,10 @@ head(dat[,3:5])
 
 Map occurrences
 
-```{r echo=TRUE, tidy_source=TRUE, message=FALSE, results="asis"}
+```{r echo=TRUE, tidy_source=TRUE, message=FALSE}
 dat$Loc <- paste(dat$decimalLatitude, dat$decimalLongitude, sep=":")
 gm <- gvisMap(dat,locationvar="Loc",tipvar="basisOfRecord")
 plot(gm)
 ```
-
+![]("gvismap.tiff")
 
