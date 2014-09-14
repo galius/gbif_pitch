@@ -65,7 +65,7 @@ head(dat[,3:5])
 ```{r echo=TRUE, tidy_source=TRUE, message=FALSE, results="asis"}
 library(googleVis)
 dat$Loc <- paste(dat$decimalLatitude, dat$decimalLongitude, sep=":")
-gvisMap(dat,locationvar="Loc",tipvar="basisOfRecord")
+gvisMap(dat,locationvar="Loc",tipvar="basisOfRecord",width=500,height=400)
 ```
 
 
