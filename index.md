@@ -68,10 +68,6 @@ dat <- occ_search(taxonKey=sp$speciesKey,
         limit=max_occ, return='data',hasCoordinate= TRUE)
 ```
 
-```
-## Error: easy handled already used in multi handle
-```
-
 ```r
 head(dat[,3:5])
 ```
@@ -96,5 +92,5 @@ library(googleVis)
 dat$Loc <- paste(dat$decimalLatitude, dat$decimalLongitude, sep=":")
 plot(gvisMap(dat,locationvar="Loc",tipvar="basisOfRecord"))
 ```
-![](assets/img/gvismap.png)
+
 
