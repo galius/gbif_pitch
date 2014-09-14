@@ -126,16 +126,13 @@ cat(paste(sp[c(&quot;kingdom&quot;,&quot;phylum&quot;,&quot;class&quot;,&quot;or
 
 <slide class="" id="slide-4" style="background:;">
   <hgroup>
-    <h2>Example: Ursus americanus</h2>
+    <h2>Example: Distribution of Ursus americanus</h2>
   </hgroup>
   <article data-timings="">
-    <p>Map occurrences</p>
-
-<pre><code class="r">dat$Loc &lt;- paste(dat$decimalLatitude, dat$decimalLongitude, sep=&quot;:&quot;)
+    <pre><code class="r">library(googleVis)
+dat$Loc &lt;- paste(dat$decimalLatitude, dat$decimalLongitude, sep=&quot;:&quot;)
 plot(gvisMap(dat,locationvar=&quot;Loc&quot;,tipvar=&quot;basisOfRecord&quot;))
 </code></pre>
-
-<p><img src="assets/img/gvismap.png" alt=""></p>
 
   </article>
   <!-- Presenter Notes -->
@@ -165,7 +162,7 @@ plot(gvisMap(dat,locationvar=&quot;Loc&quot;,tipvar=&quot;basisOfRecord&quot;))
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=4 title='Example: Ursus americanus'>
+        data-slide=4 title='Example: Distribution of Ursus americanus'>
          4
       </a>
     </li>

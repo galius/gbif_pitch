@@ -88,14 +88,13 @@ head(dat[,3:5])
 
 ---
 
-## Example: Ursus americanus
-
-Map occurrences
+## Example: Distribution of Ursus americanus
 
 
 ```r
+library(googleVis)
 dat$Loc <- paste(dat$decimalLatitude, dat$decimalLongitude, sep=":")
 plot(gvisMap(dat,locationvar="Loc",tipvar="basisOfRecord"))
 ```
-![](assets/img/gvismap.png)
+
 
