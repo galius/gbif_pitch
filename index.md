@@ -100,9 +100,7 @@ gvisMap(dat,locationvar="Loc",tipvar="basisOfRecord",
 
 <iframe srcdoc="
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
 <head>
 <title>MapIDa88505ecc8f</title>
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
@@ -14509,4 +14507,4 @@ callbacks.shift()();
 </body>
 </html>
 
-"></iframe>
+" width=500 height=400></iframe>
