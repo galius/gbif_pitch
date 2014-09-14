@@ -51,7 +51,7 @@ Count the number of georeferenced occurrences with `occ_count()`:
 
 Search for georeferenced occurrences using `occ_search()`:
 
-```{r echo=TRUE, tidy_source=TRUE}
+```{r echo=TRUE, tidy_source=TRUE, message=FALSE}
 dat <- occ_search(taxonKey=sp$speciesKey,
         fields=c("name","key","decimalLatitude","decimalLongitude","basisOfRecord"),
         limit=max_occ, return='data',hasCoordinate= TRUE)
@@ -66,7 +66,8 @@ Map occurrences
 
 ```{r echo=TRUE, tidy_source=TRUE, message=FALSE}
 dat$Loc <- paste(dat$decimalLatitude, dat$decimalLongitude, sep=":")
-gvisMap(dat,locationvar="Loc",tipvar="basisOfRecord")
+gm <-gvisMap(dat,locationvar="Loc",tipvar="basisOfRecord")
+plot(gm)
 ```
 
 
