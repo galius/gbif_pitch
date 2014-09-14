@@ -131,10 +131,8 @@ cat(paste(sp[c(&quot;kingdom&quot;,&quot;phylum&quot;,&quot;class&quot;,&quot;or
   <article data-timings="">
     <pre><code class="r">library(googleVis)
 dat$Loc &lt;- paste(dat$decimalLatitude, dat$decimalLongitude, sep=&quot;:&quot;)
-gvisMap(dat,locationvar=&quot;Loc&quot;,tipvar=&quot;basisOfRecord&quot;,width=500,height=400)
-</code></pre>
-
-<pre><code>## Error: unused arguments (width = 500, height = 400)
+plot(gvisMap(dat,locationvar=&quot;Loc&quot;,tipvar=&quot;basisOfRecord&quot;,
+    options=list(width=500,height=400)))
 </code></pre>
 
   </article>

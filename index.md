@@ -94,11 +94,8 @@ head(dat[,3:5])
 ```r
 library(googleVis)
 dat$Loc <- paste(dat$decimalLatitude, dat$decimalLongitude, sep=":")
-gvisMap(dat,locationvar="Loc",tipvar="basisOfRecord",width=500,height=400)
-```
-
-```
-## Error: unused arguments (width = 500, height = 400)
+plot(gvisMap(dat,locationvar="Loc",tipvar="basisOfRecord",
+    options=list(width=500,height=400)))
 ```
 
 
