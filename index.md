@@ -94,8 +94,8 @@ head(dat[,3:5])
 ```r
 library(googleVis)
 dat$Loc <- paste(dat$decimalLatitude, dat$decimalLongitude, sep=":")
-plot(gvisMap(dat,locationvar="Loc",tipvar="basisOfRecord",
-    options=list(width=500,height=400)))
+gvisMap(dat,locationvar="Loc",tipvar="basisOfRecord",
+    options=list(width=500,height=400))
 ```
 
 
