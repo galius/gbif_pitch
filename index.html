@@ -66,10 +66,11 @@
 
 <slide class="" id="slide-2" style="background:;">
   <hgroup>
-    <h2>Example: Ursus americanus</h2>
+    <h2>Example: <em>Ursus americanus</em></h2>
   </hgroup>
   <article data-timings="">
-    <p>The American black bear (Ursus americanus) is a medium-sized bear native to North America. It is the continent&#39;s smallest and most widely distributed bear species.</p>
+    <p>The American black bear (<em>Ursus americanus</em>) is a medium-sized bear native to North America. It is the continent&#39;s smallest and most widely distributed bear species.</p>
+    <img src="assets/img/Ursus_americanus.jpg" alt="Ursus americanus" style="float:right">
 
 <p><code>name_backbone()</code> is used to search against the GBIF backbone taxonomy:</p>
 
@@ -95,7 +96,7 @@ cat(paste(sp[c(&quot;kingdom&quot;,&quot;phylum&quot;,&quot;class&quot;,&quot;or
 
 <slide class="" id="slide-3" style="background:;">
   <hgroup>
-    <h2>Example: Ursus americanus</h2>
+    <h2>Example: <em>Ursus americanus</em></h2>
   </hgroup>
   <article data-timings="">
     <p>Search for georeferenced occurrences using <code>occ_search()</code>:</p>
@@ -103,9 +104,6 @@ cat(paste(sp[c(&quot;kingdom&quot;,&quot;phylum&quot;,&quot;class&quot;,&quot;or
 <pre><code class="r">dat &lt;- occ_search(taxonKey=sp$speciesKey,
         fields=c(&quot;name&quot;,&quot;key&quot;,&quot;decimalLatitude&quot;,&quot;decimalLongitude&quot;,&quot;basisOfRecord&quot;),
         limit=max_occ, return=&#39;data&#39;,hasCoordinate= TRUE)
-</code></pre>
-
-<pre><code>## Error: easy handled already used in multi handle
 </code></pre>
 
 <pre><code class="r">head(dat[,3:5])
@@ -126,7 +124,7 @@ cat(paste(sp[c(&quot;kingdom&quot;,&quot;phylum&quot;,&quot;class&quot;,&quot;or
 
 <slide class="" id="slide-4" style="background:;">
   <hgroup>
-    <h2>Example: Distribution of Ursus americanus</h2>
+    <h2>Example: Distribution of <em>Ursus americanus</em></h2>
   </hgroup>
   <article data-timings="">
     <pre><code class="r">library(googleVis)
