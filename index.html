@@ -132,8 +132,7 @@ cat(paste(sp[c(&quot;kingdom&quot;,&quot;phylum&quot;,&quot;class&quot;,&quot;or
     <p>Map occurrences</p>
 
 <pre><code class="r">dat$Loc &lt;- paste(dat$decimalLatitude, dat$decimalLongitude, sep=&quot;:&quot;)
-gm &lt;- gvisMap(dat,locationvar=&quot;Loc&quot;,tipvar=&quot;basisOfRecord&quot;)
-plot(gm)
+plot(gvisMap(dat,locationvar=&quot;Loc&quot;,tipvar=&quot;basisOfRecord&quot;))
 </code></pre>
 
 <p><img src="assets/img/gvismap.png" alt=""></p>

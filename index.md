@@ -95,8 +95,7 @@ Map occurrences
 
 ```r
 dat$Loc <- paste(dat$decimalLatitude, dat$decimalLongitude, sep=":")
-gm <- gvisMap(dat,locationvar="Loc",tipvar="basisOfRecord")
-plot(gm)
+plot(gvisMap(dat,locationvar="Loc",tipvar="basisOfRecord"))
 ```
 ![](assets/img/gvismap.png)
 
