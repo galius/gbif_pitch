@@ -98,5 +98,5 @@ dat$Loc <- paste(dat$decimalLatitude, dat$decimalLongitude, sep=":")
 gm <- gvisMap(dat,locationvar="Loc",tipvar="basisOfRecord")
 plot(gm)
 ```
-![]("assets/img/gvismap.tiff")
+![]("assets/img/gvismap.png")
 
